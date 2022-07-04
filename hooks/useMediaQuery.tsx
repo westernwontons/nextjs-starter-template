@@ -4,11 +4,11 @@ const useMediaQuery = (mediaQuery: string) => {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    const media = window.matchMedia(mediaQuery);
-    setMatches(media.matches);
+    setMatches(window.matchMedia(mediaQuery).matches);
   }, [mediaQuery]);
 
   return matches;
 };
 
 export default useMediaQuery;
+
